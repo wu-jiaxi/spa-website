@@ -1,0 +1,20 @@
+.hotelDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageDetailsAndCarousel {
+  display: flex;
+  flex-direction: row;
+  outline-style: dotted;
+}
+
+.spaDetails {
+  width: 30%;
+}
+
+.spaCarousel {
+  width: 70%;
+}
