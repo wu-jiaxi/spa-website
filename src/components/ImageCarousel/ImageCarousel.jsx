@@ -55,16 +55,17 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box sx={{ maxWidth: 800, flexGrow: 1 }}>
       <Paper
         square
         elevation={0}
         sx={{
           display: "flex",
           alignItems: "center",
-          height: 50,
+          height: 25,
           pl: 2,
           bgcolor: "background.default",
+          padding: 0,
         }}
       ></Paper>
       <AutoPlaySwipeableViews
@@ -79,11 +80,12 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 sx={{
-                  height: 255,
+                  height: 500,
                   display: "block",
-                  maxWidth: 400,
+                  maxWidth: 800,
                   overflow: "hidden",
                   width: "100%",
+                  padding: 0,
                 }}
                 src={step.imgPath}
                 alt={step.label}
