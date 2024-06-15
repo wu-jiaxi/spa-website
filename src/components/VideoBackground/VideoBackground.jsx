@@ -1,6 +1,4 @@
-import React from "react";
 import "./VideoBackground.css";
-import NavBar from "../NavBar/NavBar";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";

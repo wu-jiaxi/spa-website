@@ -1,0 +1,26 @@
+/* Collage.css */
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between items */
+}
+
+.collage-item {
+  flex: 1 0 200px; /* Flex properties to control item sizing */
+  min-width: 200px; /* Minimum width for each item */
+  height: 200px; /* Set a fixed height or use aspect ratio techniques */
+  background-color: #ccc; /* Placeholder background color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .collage-item {
+    flex-basis: calc(50% - 10px); /* Two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .collage-item {
+    flex-basis: 100%; /* Stack items vertically on smaller screens */
+  }
+}
