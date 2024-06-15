@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 75px;
 }
 
 .imageDetailsAndCarousel {
@@ -10,6 +11,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  padding-bottom: 75px;
 }
 
 .spaDetails {
