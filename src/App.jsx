@@ -1,6 +1,7 @@
 import "./App.css";
 import VideoBackground from "./components/VideoBackground/VideoBackground";
 import HotelDetails from "./components/HotelDetails/HotelDetails";
+import Footer from "./components/Footer/Footer";
 import facial from "./assets/facial.jpg";
 import flowers from "./assets/NYC Spa_files/flowers.jpg";
 import oils from "./assets/NYC Spa_files/oils.jpg";
@@ -28,6 +29,7 @@ function App() {
         <VideoBackground />
         <HotelDetails />
         <ReactPhotoCollage {...setting} />
+        <Footer />
       </div>
     </>
   );
