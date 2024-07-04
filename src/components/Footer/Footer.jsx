@@ -31,6 +31,7 @@ const Footer = () => {
 
           <div>Address</div>
           <div>Address</div>
+          <div>Address</div>
         </div>
       </div>
     </div>
