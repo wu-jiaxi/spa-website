@@ -28,6 +28,7 @@ const Footer = () => {
           <div>Soja Spa Club</div>
           <div>Address</div>
           <div>Address</div>
+          <div>Address</div>
         </div>
       </div>
     </div>
