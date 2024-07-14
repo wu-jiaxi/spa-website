@@ -1,5 +1,3 @@
-import "./HotelDetails.css";
-
 const Footer = () => {
   return (
     <div>
@@ -27,10 +25,9 @@ const Footer = () => {
         <div>
           <div>Soja Spa Club</div>
           <div>Address</div>
-          <div>Address</div>
-          <div>Address</div>
-          <div>Address</div>
-          <div>Address</div>
+          <div>Services</div>
+          <div>Reviews</div>
+          <div>Gift Cards</div>
         </div>
       </div>
     </div>
