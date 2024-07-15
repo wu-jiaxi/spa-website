@@ -1,0 +1,32 @@
+#itemDescription {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+#itemBorderStyle {
+  border: 2px solid #ccc;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+#heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#heading {
+  margin: 0;
+}
+
+#drilldown {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+#drillDownButton {
+  margin-left: 7px;
+  margin-bottom: 0.5px;
+}

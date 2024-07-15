@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#tabs {
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.test {
+  width: 110px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+#tabs .test {
+  margin-right: 20px;
+}
+
+#form-container {
+  padding: 20px;
+}
+
+.itemStyles {
+  margin-bottom: 10px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  margin-top: 10px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+#Zealthy {
+  display: flex;
+  justify-content: center;
+  cursor: default;
+}
+
+#tabsUL {
+  width: 100;
+}
