@@ -10,7 +10,7 @@ const Layout = () => {
       <nav id="tabs">
         <ul id="tabsUL">
           <li className="test">
-            <Link to="/" className="link">
+            <Link to="/form" className="link">
               Form
             </Link>
           </li>
