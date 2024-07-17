@@ -8,8 +8,12 @@ export const getTickets = async () => {
   return response.data;
 };
 
-export const createTicket = async (ticket) => {
-  const response = await axios.post(`${API_URL}tickets/`, ticket);
+export const createTicket = async (formData) => {
+  const response = await axios.post(`${API_URL}tickets/`, formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
   return response.data;
 };
 
@@ -18,8 +22,13 @@ export const getTicket = async (id) => {
   return response.data;
 };
 
-export const updateTicket = async (id, ticket) => {
-  const response = await axios.put(`${API_URL}tickets/${id}/`, ticket);
+export const updateTicket = async (id, updateData) => {
+  console.log("Update Data:", updateData);
+  const response = await axios.put(`${API_URL}tickets/${id}/`, updateData, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
   return response.data;
 };
 

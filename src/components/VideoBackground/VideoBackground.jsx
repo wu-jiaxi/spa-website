@@ -24,7 +24,7 @@ const VideoBackground = () => {
           variant="contained"
           style={{ borderRadius: 50 }}
         >
-          <Link to="/layout" className="link">
+          <Link to="/form" className="link">
             Plan your Trip
           </Link>
         </Button>

@@ -1,6 +1,5 @@
-// src/components/Form.jsx
-import { useState } from "react";
-import { createTicket } from "../services/api";
+import { useState, useRef } from "react";
+import { createTicket } from "../services/api"; // Ensure this function handles file uploads
 import "../Form/Form.css";
 import { v4 as uuidv4 } from "uuid";
 
@@ -12,15 +11,19 @@ const TicketForm = () => {
     attachment: null,
   });
 
+  const fileInputRef = useRef(null);
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value, files } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: files ? files[0] : value,
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (
       !formData.name.trim() ||
       !formData.email.trim() ||
@@ -31,23 +34,45 @@ const TicketForm = () => {
     }
 
     try {
-      alert("Submitted");
       const currentDate = new Date();
-      const formattedDate = currentDate.toLocaleString();
-      const newFormData = {
-        ...formData,
-        id: uuidv4(),
-        created_at: formattedDate,
+      const options = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        hour12: true,
       };
+      const formattedDate = currentDate.toLocaleString("en-US", options);
+
+      const newFormData = new FormData();
+      newFormData.append("name", formData.name);
+      newFormData.append("email", formData.email);
+      newFormData.append("description", formData.description);
+      if (formData.attachment) {
+        newFormData.append("attachment", formData.attachment);
+      }
+      newFormData.append("id", uuidv4());
+      newFormData.append("created_at", formattedDate);
+
       await createTicket(newFormData);
+
+      alert("Submitted");
+
       setFormData({
         name: "",
         email: "",
         description: "",
         attachment: null,
       });
+
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
     } catch (error) {
       console.error("Error submitting ticket", error);
+      alert("Error submitting ticket");
     }
   };
 
@@ -61,7 +86,6 @@ const TicketForm = () => {
         encType="multipart/form-data"
       >
         <input
-          id={Math.random()}
           type="text"
           name="name"
           value={formData.name}
@@ -84,15 +108,7 @@ const TicketForm = () => {
           placeholder="Description"
           autoComplete="description-field"
         />
-        <input
-          type="file"
-          name="attachment"
-          onChange={(e) => {
-            console.log("File selected:", e.target.files[0]);
-            setFormData({ ...formData, attachment: e.target.files[0] });
-          }}
-          autoComplete="image-field"
-        />
+
         <button type="submit">Submit</button>
       </form>
     </div>

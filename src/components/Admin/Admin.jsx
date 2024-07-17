@@ -1,6 +1,6 @@
 // src/components/Admin.jsx
 import { useState, useEffect } from "react";
-import { getTickets, deleteTicket, updateTicket } from "../services/api";
+import { getTickets, deleteTicket } from "../services/api";
 import "../Admin/Admin.css";
 
 function Admin() {
@@ -38,22 +38,6 @@ function Admin() {
     event.stopPropagation();
   };
 
-  const handleStatusClick = (event) => {
-    event.stopPropagation();
-  };
-
-  const handleStatusChange = async (id, status) => {
-    try {
-      await updateTicket(id, { status });
-
-      setData(
-        data.map((item) => (item.id === id ? { ...item, status } : item))
-      );
-    } catch (error) {
-      console.error("Error updating status:", error);
-    }
-  };
-
   return (
     <div>
       <ul id="itemDescription">
@@ -71,20 +55,6 @@ function Admin() {
                 </div>
                 <div className="itemStyles">
                   Time Created: {item.created_at}
-                </div>
-                <div className="itemStyles">
-                  Status: {item.status}
-                  <select
-                    value={item.status}
-                    onChange={(e) =>
-                      handleStatusChange(item.id, e.target.value)
-                    }
-                    onClick={handleStatusClick}
-                  >
-                    <option value="new">New</option>
-                    <option value="in progress">In Progress</option>
-                    <option value="resolved">Resolved</option>
-                  </select>
                 </div>
                 <button onClick={() => removeItem(item.id)}>Remove</button>
               </div>

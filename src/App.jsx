@@ -10,9 +10,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SpaHomepage />} />
-        <Route path="form" element={<TicketForm />} />
-        <Route path="layout" element={<Layout />} />
-        <Route path="admin" element={<Admin />} />
+        <Route element={<Layout />}>
+          <Route path="form" element={<TicketForm />} />
+          <Route path="admin" element={<Admin />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

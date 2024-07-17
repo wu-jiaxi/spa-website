@@ -4,8 +4,10 @@ import "../Layout/Layout.css";
 const Layout = () => {
   return (
     <>
-      <div id="Zealthy">
-        <h1>Zealthy</h1>
+      <div id="NycSpa">
+        <Link to="/" className="link">
+          <h1>NYC Spa</h1>
+        </Link>
       </div>
       <nav id="tabs">
         <ul id="tabsUL">
@@ -15,13 +17,12 @@ const Layout = () => {
             </Link>
           </li>
           <li className="test">
-            <Link to="/Admin" className="link">
+            <Link to="/admin" className="link">
               Admin
             </Link>
           </li>
         </ul>
       </nav>
-
       <Outlet />
     </>
   );
