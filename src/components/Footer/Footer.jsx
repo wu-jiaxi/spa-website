@@ -28,6 +28,7 @@ const Footer = () => {
           <div>Services</div>
           <div>Reviews</div>
           <div>Gift Cards</div>
+          <div>Gift Cards</div>
         </div>
       </div>
     </div>
