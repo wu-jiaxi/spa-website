@@ -29,6 +29,7 @@ const Footer = () => {
           <div>Reviews</div>
           <div>Gift Cards</div>
           <div>Gift Cards</div>
+          <div>Gift Cards</div>
         </div>
       </div>
     </div>
