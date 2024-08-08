@@ -31,7 +31,8 @@ const Footer = () => {
           <div>Gift Cards</div>
           <div>Gift Cards</div>
           <div>Gift Cards</div>
-          <div>Gift Cards</div>
+        
+
         </div>
       </div>
     </div>
