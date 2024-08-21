@@ -1,0 +1,32 @@
+.imageDetailsAndCarousel {
+  margin-top: 80px; /* Adjust this value based on your navbar height */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the content */
+  gap: 20px; /* Even spacing between spaDetails and spaCarousel */
+}
+
+.spaDetails {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.spaCarousel {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+}
+
+.spaceDetailsTitle h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center; /* Center the title text */
+  color: white;
+}
+
+.spaDetailsParagraphs p {
+  margin-bottom: 15px;
+  text-align: justify; /* Optional: Justify text for better readability */
+  color: white;
+}

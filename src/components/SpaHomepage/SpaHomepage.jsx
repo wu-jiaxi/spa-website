@@ -1,5 +1,5 @@
 //import VideoBackground from "../components/VideoBackground/VideoBackground";
-import VideoBackground from "../VideoBackground/VideoBackground";
+import Blackboard from "../BlackboardBackground/Blackboard";
 import HotelDetails from "../HotelDetails/HotelDetails";
 //import facial from "./assets/facial.jpg";
 import facial from "../../assets/facial.jpg";
@@ -26,7 +26,7 @@ function SpaHomePage() {
   return (
     <>
       <div>
-        <VideoBackground />
+        <Blackboard />
         <HotelDetails />
         <ReactPhotoCollage {...setting} />
       </div>
